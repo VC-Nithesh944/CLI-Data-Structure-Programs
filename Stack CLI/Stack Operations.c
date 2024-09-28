@@ -54,6 +54,7 @@ void print(){                          //To Print all element of the Stack
     for (int i=0;i<=top;i++){
         printf("%d ",stack_arr[i]);
     }
+    printf("<- Top");         //To show where the top element is present or gets added when pushed
 }
 
 int main(){
