@@ -3,21 +3,21 @@
 int stack_arr[MAX];
 int top = -1;
 
-int isFull(){
+int isFull(){                        //To check whether Stack is Full
     if (top == MAX - 1)
         return 1;
     else 
         return 0;
 }
 
-int isEmpty(){
+int isEmpty(){                        //To Check whether Stack is Empty
     if (top == -1)
     return 1;
     else 
     return 0;
 }
 
-void push(int data){
+void push(int data){                  //To Push an element into the stack 
     if(isFull()){
         printf("Stack Overflow!! %d cant be pushed \n",data);
         return;
@@ -26,7 +26,7 @@ void push(int data){
     stack_arr[top] = data;
 }
 
-int pop(){
+int pop(){                            //To pop the Top element of Stack and return it
     if (isEmpty()){
         printf("Stack is Empty!!\n");
         exit(1);
@@ -36,7 +36,7 @@ int pop(){
     return value;
 }
 
-int peek(){
+int peek(){                            //To return the Top element of the Stack
     if (isEmpty()){
         printf("Stack is Empty!!\n");
         exit(1);
@@ -45,7 +45,7 @@ int peek(){
     return value;
 }
 
-void print(){
+void print(){                          //To Print all element of the Stack
     if (isEmpty()){
         printf("Stack is Empty!\n");
         return;
