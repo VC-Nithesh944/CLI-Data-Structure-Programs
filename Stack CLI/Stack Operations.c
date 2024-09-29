@@ -44,6 +44,16 @@ int peek(){                            //To return the Top element of the Stack
     int value = stack_arr[top];
     return value;
 }
+void pushAtBottom(int data){           //To push an element to bottom of the array.
+    if (isEmpty()){
+        ++top;
+        stack[top] = data;
+        return;
+    }
+    int value = pop();
+    pushAtBottom(data);
+    push(value);
+}
 
 void print(){                          //To Print all element of the Stack
     if (isEmpty()){
@@ -61,7 +71,7 @@ int main(){
     int choice, data;
     while(1){
     printf("\n");
-    printf("1. Push an element \n2. Pop an element \n3. Print the top element\n4. Print all the elements \n5. Quit\n");
+    printf("1. Push an element \n2. Pop an element \n3. Print the top element\n4. Print all the elements \n5.Push an element to Stack Bottom \n6. Quit\n");
     printf("Enter the Your choice: ");
     scanf("%d",&choice);
     printf("\n");
@@ -74,12 +84,15 @@ int main(){
         break;
         case 3: printf("The Top element of the Stack is: %d",peek());
         break;
-        case 4:print();
+        case 4: print();
         break;
-        case 5: exit(1);
+        case 5: printf("Enter the element to push at Bottom: ");
+        scanf("%d",&data);
+        pushAtBottom(data);
+        case 6: exit(1);
         break;
         default: printf("INVALID ENTRY!! Try again!");
-    }
+        }
     }
     return 0;
 }
