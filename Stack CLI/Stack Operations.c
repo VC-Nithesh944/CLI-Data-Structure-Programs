@@ -44,7 +44,7 @@ int peek(){                            //To return the Top element of the Stack
     int value = stack_arr[top];
     return value;
 }
-void pushAtBottom(int data){           //To push an element to bottom of the array.
+void pushAtBottom(int data){           //To push an element to bottom of the array if needed.
     if (isEmpty()){
         ++top;
         stack[top] = data;
