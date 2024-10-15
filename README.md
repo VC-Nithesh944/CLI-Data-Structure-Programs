@@ -35,6 +35,11 @@ This repository contains a collection of **Data Structure implementations** writ
     ```bash
     gcc filename.c -o outputfile
     ```
+
+3. **Run the program** (for C/C++):
+    ```bash
+    ./outputfile
+    ```
 ## 💡 Contributing
 
 Feel free to contribute to the repository by adding new data structures or improving existing ones. Fork the repository, make your changes, and create a pull request. We appreciate your contributions!
